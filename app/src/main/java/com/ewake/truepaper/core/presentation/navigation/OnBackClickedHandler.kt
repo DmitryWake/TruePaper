@@ -1,4 +1,4 @@
-package com.ewake.truepaper.core.navigation
+package com.ewake.truepaper.core.presentation.navigation
 
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner

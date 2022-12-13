@@ -10,8 +10,8 @@ import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.ewake.truepaper.core.navigation.NavigationDestination
-import com.ewake.truepaper.core.ui.theme.WhereMyPetTheme
+import com.ewake.truepaper.core.presentation.navigation.NavigationDestination
+import com.ewake.truepaper.core.presentation.theme.WhereMyPetTheme
 import com.ewake.truepaper.main.navigation.BottomBarDestination
 import com.ewake.truepaper.main.navigation.NavHost
 

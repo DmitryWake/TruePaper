@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.NavHostController
-import com.ewake.truepaper.core.navigation.NavigationDestination
+import com.ewake.truepaper.core.presentation.navigation.NavigationDestination
 import com.ewake.truepaper.features.feed.presentation.navigation.feedGraph
 
 /**

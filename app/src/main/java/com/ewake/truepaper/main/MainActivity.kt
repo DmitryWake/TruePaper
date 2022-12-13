@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import com.ewake.truepaper.features.feed.presentation.navigation.FeedDestination
 import com.ewake.truepaper.main.ui.MainApp
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @ExperimentalLifecycleComposeApi
     override fun onCreate(savedInstanceState: Bundle?) {

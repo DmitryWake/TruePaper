@@ -1,4 +1,4 @@
-package com.ewake.truepaper.core.ui.theme
+package com.ewake.truepaper.core.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

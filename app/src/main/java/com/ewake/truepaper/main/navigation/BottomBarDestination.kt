@@ -2,7 +2,7 @@ package com.ewake.truepaper.main.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.ewake.truepaper.core.navigation.NavigationDestination
+import com.ewake.truepaper.core.presentation.navigation.NavigationDestination
 
 /**
  * @author Nikolaevskiy Dmitriy

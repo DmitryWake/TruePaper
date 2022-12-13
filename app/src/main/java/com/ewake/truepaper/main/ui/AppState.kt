@@ -10,7 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.ewake.truepaper.R
-import com.ewake.truepaper.core.navigation.NavigationDestination
+import com.ewake.truepaper.core.presentation.navigation.NavigationDestination
 import com.ewake.truepaper.features.feed.presentation.navigation.FeedDestination
 import com.ewake.truepaper.main.navigation.BottomBarDestination
 

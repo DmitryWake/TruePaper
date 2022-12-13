@@ -1,4 +1,4 @@
-package com.ewake.truepaper.core.navigation
+package com.ewake.truepaper.core.presentation.navigation
 
 /**
  * @author Nikolaevskiy Dmitriy
