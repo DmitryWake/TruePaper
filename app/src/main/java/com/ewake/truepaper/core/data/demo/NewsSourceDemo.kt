@@ -16,7 +16,7 @@ class NewsSourceDemo @Inject constructor() : NewsSource {
                 id = counter.toString(),
                 title = "Заголовок $counter",
                 description = "Описание $counter. Описание $counter. Описание $counter. Описание $counter. Описание $counter.",
-                imageUrl = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fklike.net%2F844-nyashnye-kotiki-milye-kartinki-30-foto.html&psig=AOvVaw0Mop8BNi6zXL6omBAq8Afu&ust=1671013975385000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNDcxqWy9vsCFQAAAAAdAAAAABAE",
+                imageUrl = "https://klike.net/uploads/posts/2018-11/1542784826_1.jpg",
                 trustIndex = TrustIndexModel(5, 3, 2),
                 sourceUrl = "no"
             )

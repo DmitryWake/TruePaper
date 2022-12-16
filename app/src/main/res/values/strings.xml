@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">True Paper</string>
+
+    <!-- Данные BottomBar -->
+    <string name="feed_bottom_bar_title">Лента новостей</string>
+    <string name="profile_bottom_bar_title">Профиль</string>
 </resources>

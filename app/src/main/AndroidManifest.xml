@@ -16,7 +16,7 @@
         android:theme="@style/Theme.TruePaper"
         tools:targetApi="31">
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.presenation.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.TruePaper">
             <intent-filter>

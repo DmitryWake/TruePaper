@@ -1,4 +1,4 @@
-package com.ewake.truepaper.main.ui
+package com.ewake.truepaper.main.presenation.ui
 
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -12,8 +12,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.ewake.truepaper.core.presentation.navigation.NavigationDestination
 import com.ewake.truepaper.core.presentation.theme.WhereMyPetTheme
-import com.ewake.truepaper.main.navigation.BottomBarDestination
-import com.ewake.truepaper.main.navigation.NavHost
+import com.ewake.truepaper.main.presenation.navigation.BottomBarDestination
+import com.ewake.truepaper.main.presenation.navigation.NavHost
 
 /**
  * @author Nikolaevskiy Dmitriy

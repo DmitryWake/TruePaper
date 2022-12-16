@@ -1,4 +1,4 @@
-package com.ewake.truepaper.main.navigation
+package com.ewake.truepaper.main.presenation.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
