@@ -4,4 +4,7 @@
     <!-- Данные BottomBar -->
     <string name="feed_bottom_bar_title">Лента новостей</string>
     <string name="profile_bottom_bar_title">Профиль</string>
+
+    <!-- Данные Profile -->
+    <string name="profile_null_error">Профиль отсутствует, переустановите приложение</string>
 </resources>
