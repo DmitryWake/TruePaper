@@ -2,7 +2,7 @@ package com.ewake.truepaper.features.feed.data
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.ewake.truepaper.core.data.NewsSource
+import com.ewake.truepaper.core.data.news.NewsSource
 import com.ewake.truepaper.core.models.data.NewsBean
 import javax.inject.Inject
 

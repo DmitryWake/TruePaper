@@ -1,4 +1,4 @@
-package com.ewake.truepaper.core.data
+package com.ewake.truepaper.core.data.news
 
 import com.ewake.truepaper.core.models.data.NewsBean
 

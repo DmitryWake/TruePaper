@@ -6,7 +6,6 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -18,7 +17,6 @@ import com.ewake.truepaper.main.presenation.navigation.NavHost
 /**
  * @author Nikolaevskiy Dmitriy
  */
-@ExperimentalLifecycleComposeApi
 @Composable
 fun MainApp(
     appState: AppState = rememberAppState(),

@@ -1,6 +1,5 @@
 package com.ewake.truepaper.features.splash.presentation.navigation
 
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
@@ -16,7 +15,6 @@ object SplashDestination : NavigationDestination {
     override val shouldShowBottomBar: Boolean = false
 }
 
-@ExperimentalLifecycleComposeApi
 fun NavGraphBuilder.splashGraph(onNavigate: () -> Unit) {
     navigation(route = SplashDestination.route, startDestination = SplashDestination.destination) {
         composable(route = SplashDestination.destination) { SplashScreen(onNavigate) }

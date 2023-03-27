@@ -1,6 +1,6 @@
-package com.ewake.truepaper.core.data.demo
+package com.ewake.truepaper.core.data.news.demo
 
-import com.ewake.truepaper.core.data.NewsSource
+import com.ewake.truepaper.core.data.news.NewsSource
 import com.ewake.truepaper.core.models.data.NewsBean
 import com.ewake.truepaper.core.models.domain.TrustIndexModel
 import javax.inject.Inject

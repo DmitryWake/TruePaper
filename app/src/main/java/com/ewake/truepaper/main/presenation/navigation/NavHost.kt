@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.NavHostController
 import com.ewake.truepaper.core.presentation.navigation.NavigationDestination
 import com.ewake.truepaper.features.feed.presentation.navigation.FeedDestination
@@ -15,7 +14,6 @@ import com.ewake.truepaper.features.splash.presentation.navigation.splashGraph
 /**
  * @author Nikolaevskiy Dmitriy
  */
-@ExperimentalLifecycleComposeApi
 @Composable
 fun NavHost(
     navController: NavHostController,

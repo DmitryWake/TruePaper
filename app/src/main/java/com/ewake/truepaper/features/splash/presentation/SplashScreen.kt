@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -12,7 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ewake.truepaper.R
 import com.ewake.truepaper.features.splash.presentation.viewmodel.SplashScreenUIState
@@ -21,9 +21,6 @@ import com.ewake.truepaper.features.splash.presentation.viewmodel.SplashViewMode
 /**
  * @author Nikolaevskiy Dmitriy
  */
-
-
-@ExperimentalLifecycleComposeApi
 @Composable
 fun SplashScreen(
     onNavigate: () -> Unit,
@@ -36,6 +33,7 @@ fun SplashScreen(
     when (uiState) {
         SplashScreenUIState.Loading -> SplashLogo()
         is SplashScreenUIState.Navigating -> onNavigate.invoke()
+        is SplashScreenUIState.Error -> Text(text = (uiState as SplashScreenUIState.Error).message)
     }
 }
 
