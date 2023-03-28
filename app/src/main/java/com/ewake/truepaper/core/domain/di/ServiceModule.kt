@@ -2,7 +2,8 @@ package com.ewake.truepaper.core.domain.di
 
 import com.ewake.truepaper.BuildConfig
 import com.ewake.truepaper.core.data.interceptors.ApiInterceptor
-import com.ewake.truepaper.core.data.user.UserApi
+import com.ewake.truepaper.core.data.news.NewsService
+import com.ewake.truepaper.core.data.user.UserService
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -16,7 +17,7 @@ import retrofit2.Retrofit
 
 @Module
 @InstallIn(SingletonComponent::class)
-class ApiModule {
+class ServiceModule {
     @Provides
     fun provideRetroFit(
         okHttpClient: OkHttpClient,
@@ -44,7 +45,11 @@ class ApiModule {
     }
 
     @Provides
-    fun provideUserApi(
+    fun provideUserService(
         retrofit: Retrofit
-    ): UserApi = retrofit.create(UserApi::class.java)
+    ): UserService = retrofit.create(UserService::class.java)
+
+    @Provides
+    fun provideNewsService(retrofit: Retrofit): NewsService =
+        retrofit.create(NewsService::class.java)
 }

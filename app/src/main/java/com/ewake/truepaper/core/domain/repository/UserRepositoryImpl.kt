@@ -1,6 +1,6 @@
 package com.ewake.truepaper.core.domain.repository
 
-import com.ewake.truepaper.core.data.user.UserApi
+import com.ewake.truepaper.core.data.user.UserService
 import com.ewake.truepaper.core.data.user.UserSharedPref
 import com.ewake.truepaper.core.models.domain.UserModel
 import kotlinx.coroutines.Dispatchers
@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor(
     private val userSharedPref: UserSharedPref,
-    private val userApi: UserApi
+    private val userApi: UserService
 ) : UserRepository {
 
     override suspend fun createUser(): UserModel = withContext(Dispatchers.IO) {

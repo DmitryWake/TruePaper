@@ -17,8 +17,8 @@ import javax.inject.Inject
 class FeedRepositoryImpl @Inject constructor(
     private val pagingSource: FeedPagingSource
 ) : FeedRepository {
-    override fun getPagingFeedFlow(pageSize: Int): Flow<PagingData<NewsModel>> =
-        Pager(PagingConfig(pageSize = pageSize)) {
+    override fun getPagingFeedFlow(count: Int): Flow<PagingData<NewsModel>> =
+        Pager(PagingConfig(pageSize = count)) {
             pagingSource
         }.flow.map { data ->
             data.map {

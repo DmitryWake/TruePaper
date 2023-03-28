@@ -15,13 +15,16 @@ class FeedPagingSource @Inject constructor(private val dataSource: NewsSource) :
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, NewsBean> {
         val nextPage = params.key ?: 1
+        val offset = params.loadSize * (nextPage - 1).toLong()
 
-        val list = dataSource.getNewsFeed(nextPage)
+        return runCatching {
+            val list = dataSource.getNewsFeed(params.loadSize, offset)
 
-        return LoadResult.Page(
-            data = list,
-            prevKey = if (nextPage == 1) null else nextPage - 1,
-            nextKey = if (list.isEmpty()) null else nextPage + 1
-        )
+            LoadResult.Page(
+                data = list,
+                prevKey = if (nextPage == 1) null else nextPage - 1,
+                nextKey = if (list.isEmpty()) null else nextPage + 1
+            )
+        }.getOrElse { LoadResult.Error(it) }
     }
 }

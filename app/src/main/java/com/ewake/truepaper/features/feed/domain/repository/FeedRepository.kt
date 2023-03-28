@@ -8,5 +8,5 @@ import kotlinx.coroutines.flow.Flow
  * @author Nikolaevskiy Dmitriy
  */
 interface FeedRepository {
-    fun getPagingFeedFlow(pageSize: Int): Flow<PagingData<NewsModel>>
+    fun getPagingFeedFlow(count: Int): Flow<PagingData<NewsModel>>
 }

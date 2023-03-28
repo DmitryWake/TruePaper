@@ -40,7 +40,7 @@ fun FeedScreen(
                 CircularProgressIndicator()
             }
             state.append is LoadState.Error -> {
-                Text(text = "Ошибка")
+                Text(text = "Ошибка: ${(state.append as LoadState.Error).error.message}")
             }
         }
     }
@@ -66,7 +66,7 @@ fun NewsCard(model: NewsModel, onCardClickListener: ((model: NewsModel) -> Unit)
         Column {
             SubcomposeAsyncImage(
                 model = model.imageUrl,
-                contentDescription = model.title,
+                contentDescription = null,
                 loading = {
                     CircularProgressIndicator()
                 },
@@ -75,15 +75,9 @@ fun NewsCard(model: NewsModel, onCardClickListener: ((model: NewsModel) -> Unit)
             )
 
             Text(
-                text = model.title,
-                fontSize = 32.sp,
-                modifier = Modifier.padding(top = 16.dp, start = 16.dp, end = 16.dp)
-            )
-            Text(
-                text = model.description,
+                text = model.newsBody,
                 fontSize = 18.sp,
-                modifier = Modifier.padding(start = 16.dp, bottom = 16.dp, end = 16.dp),
-                color = Color.Gray
+                modifier = Modifier.padding(16.dp)
             )
         }
     }
