@@ -11,3 +11,6 @@ data class TrustIndexModel(
     val trustCount: Int,
     val distrustCount: Int
 )
+
+fun TrustIndexModel.calculateTrustPercent() = (trustCount / (totalCount / 100.0)).toInt()
+fun TrustIndexModel.calculateDisTrustPercent() = 100 - (trustCount / (totalCount / 100.0)).toInt()
