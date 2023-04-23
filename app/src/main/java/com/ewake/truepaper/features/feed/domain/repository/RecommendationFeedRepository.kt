@@ -5,24 +5,20 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.map
 import com.ewake.truepaper.core.data.news.NewsService
-import com.ewake.truepaper.core.domain.di.FeedPagingSourceQualifier
+import com.ewake.truepaper.core.domain.di.RecommendationFeedPagingSourceQualifier
 import com.ewake.truepaper.core.models.data.SetNewsScoreRequestBean
 import com.ewake.truepaper.core.models.data.convertToNewsModel
 import com.ewake.truepaper.core.models.domain.NewsModel
 import com.ewake.truepaper.core.models.domain.TrustIndexModel
 import com.ewake.truepaper.features.feed.data.FeedPagingSource
-import com.ewake.truepaper.features.feed.data.FeedPagingSourceImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-/**
- * @author Nikolaevskiy Dmitriy
- */
-class FeedRepositoryImpl @Inject constructor(
-    @FeedPagingSourceQualifier
+class RecommendationFeedRepository @Inject constructor(
+    @RecommendationFeedPagingSourceQualifier
     private val pagingSource: FeedPagingSource,
     private val newsService: NewsService
 ) : FeedRepository {
@@ -37,6 +33,6 @@ class FeedRepositoryImpl @Inject constructor(
 
     override suspend fun setNewsScore(newsId: Int, score: Boolean): TrustIndexModel =
         withContext(Dispatchers.IO) {
-            newsService.setNewsScore(SetNewsScoreRequestBean(newsId, score, false))
+            newsService.setNewsScore(SetNewsScoreRequestBean(newsId, score, true))
         }
 }

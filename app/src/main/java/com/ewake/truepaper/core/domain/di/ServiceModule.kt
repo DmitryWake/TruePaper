@@ -24,7 +24,7 @@ class ServiceModule {
     ): Retrofit {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl(BuildConfig.LOCAL_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
             .build()
     }

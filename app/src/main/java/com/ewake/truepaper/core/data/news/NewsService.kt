@@ -10,7 +10,16 @@ import retrofit2.http.Query
 
 interface NewsService {
     @GET("/newsFeed")
-    suspend fun getNewsFeed(@Query("count") count: Int, @Query("offset") offset: Long): List<NewsBean>
+    suspend fun getNewsFeed(
+        @Query("count") count: Int,
+        @Query("offset") offset: Long
+    ): List<NewsBean>
+
+    @GET("/newsFeed/recommendation")
+    suspend fun getRecommendationNewsFeed(
+        @Query("count") count: Int,
+        @Query("offset") offset: Long
+    ): List<NewsBean>
 
     @POST("/newsUserScore/setScore")
     suspend fun setNewsScore(@Body request: SetNewsScoreRequestBean): TrustIndexModel
